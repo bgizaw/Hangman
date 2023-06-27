@@ -28,7 +28,7 @@ public class Main {
             System.out.print("Guess a letter: ");
             char guess = sc.next().charAt(0);
             guess = Character.toLowerCase(guess);
-            attempts(tries, secretWord, guess, unknownWord);
+            attempts(secretWord, guess, unknownWord);
             StringBuilder reference = new StringBuilder(secretWord);
             String referenceString = String.valueOf(guess);
             // use .indexOf method to check if the character guessed is not present in the word provided
