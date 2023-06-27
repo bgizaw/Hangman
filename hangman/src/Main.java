@@ -35,12 +35,13 @@ public class Main {
             // if not present, the code returns -1, increases the tries variable by 1, and prints "wrong"
             if ((reference.indexOf(referenceString)) == -1) {
                 tries += 1;
-                System.out.println("wrong");
+                System.out.print("wrong");
             }
+
             // if there are no "*" left in the original stringbuilder of "*", that means the player guessed all
             // letters correctly and won
             if ((unknownWord.indexOf("*")) == -1) {
-                System.out.println("You guessed the word! \n" + line + "\n" +"|*|" + secretWord + "|*|");
+                System.out.print("You guessed the word! \n" + line + "\n" +"|*|" + secretWord + "|*|");
                 break;
             }
         } while (tries<4);
@@ -63,7 +64,7 @@ public class Main {
         }
     }
     //check if guess is correct and replace asterisk with letter if correct
-        static StringBuilder attempts(int tries, String secretWord, char guess, StringBuilder unknownWord) {
+        static StringBuilder attempts(String secretWord, char guess, StringBuilder unknownWord) {
             for (int i = 0; i < secretWord.length(); i++) {
                 if (secretWord.charAt(i) == guess) {
                     unknownWord.setCharAt(i, guess);
