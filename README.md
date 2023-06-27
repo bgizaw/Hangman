@@ -1,5 +1,5 @@
 # hangman-game-java 
-_Simple hangman game that allows you to input a word and guess the word letter-by-letter_
+Simple hangman game that allows you to input a word and guess the word letter-by-letter
 - Java
 - [x] User input
 - [x] Dynamic hangman image
