@@ -48,7 +48,7 @@ public class Main {
             }
         } while (tries<MAX_TRIES);
 
-        if (tries == 4) {
+        if (tries == MAX_TRIES) {
             hangImage = """ 
                            -------------
                            |           |
