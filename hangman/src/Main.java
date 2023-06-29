@@ -9,15 +9,17 @@ public class Main {
         // change case to lowercase to ensure any case can be accepted as correct
         String secretWord = sc.nextLine().toLowerCase();
         int tries = 0;
+        int MAX_TRIES = 4;
         String hangImage = "";
         StringBuilder unknownWord = new StringBuilder();
-        // loop to create stringbuilder of asterisks same length as word provided
+        // loop to create StringBuilder of asterisks same length as word provided
         for (int i = 0; i < secretWord.length(); i++) {
             unknownWord.append("*");
         }
         // loop to create line based on the length of word provided (only for aesthetic purposes)
         StringBuilder line = new StringBuilder();
-        for (int i=0; i<(secretWord.length()+6); i++) {
+        int extraLines = 6;
+        for (int i=0; i<(secretWord.length()+extraLines); i++) {
             line.append("_");
         }
         // makes code continuously run as long as the # of tries is less than 4
@@ -38,13 +40,13 @@ public class Main {
                 System.out.print("wrong");
             }
 
-            // if there are no "*" left in the original stringbuilder of "*", that means the player guessed all
+            // if there are no "*" left in the original StringBuilder of "*", that means the player guessed all
             // letters correctly and won
             if ((unknownWord.indexOf("*")) == -1) {
                 System.out.print("You guessed the word! \n" + line + "\n" +"|*|" + secretWord + "|*|");
                 break;
             }
-        } while (tries<4);
+        } while (tries<MAX_TRIES);
 
         if (tries == 4) {
             hangImage = """ 
