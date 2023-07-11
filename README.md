@@ -31,7 +31,7 @@ The **Hangman Game** is a classic word-guessing game where players try to guess 
    javac Main.java
 
 ## Example
-The number of times the image of the hangman was shown in the example was reduced in order to prevent redundancy while explaining the function of this program. In the full program, the computer will reprint the updated string image of the hangman every time you guess a word. Lastly, each extra space between the three lines representing the real-time unknown word, number of wrong attempts, and the letter you are guessing, represents a new output that occurs each time you guess a letter.
+The number of times the image of the hangman was shown in the example was reduced in order to prevent redundancy while explaining the function of this program. In the full program, the computer will reprint the updated string image of the hangman every time you guess a word, depending on how many wrong attempts you have. Lastly, each extra space between the three lines representing the real-time unknown word, the number of wrong attempts, and the letter you are guessing, represents a new output that occurs each time you guess a letter.
   
 ```shell
 $ java Main
